@@ -1,0 +1,21 @@
+TRANSACTION USAGE:
+multi:相当于告诉redis，接下来的命令看成原子操作，并且redis会将它们排序
+exec：redis会执行排序好的命令
+discard:停止事务
+watch:乐观锁，存在多个用户操作某个值时，如果其他用户在当前用户执行watch和exec之间修改值时，当前事务会失败
+
+REDIS MASS INSERTION USAGE:
+You should create a file containing the following commands in the redis protocol format:
+ SET key0 value0
+ SET key1 value1
+ ...
+ SET keyN valueN
+then execute 'cat data.txt | redis-cli --pipe'
+
+
+
+
+
+
+
+ 

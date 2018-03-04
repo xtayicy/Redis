@@ -1,0 +1,2 @@
+The ability to automatically split your dataset among multiple nodes.
+The ability to continue operations when a subset of the nodes are experiencing failures or are unable to communicate with the rest of the cluster.

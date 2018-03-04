@@ -1,0 +1,14 @@
+1.eval and evalsha
+eval:执行lua脚本
+example:
+> eval "return {KEYS[1],KEYS[2],ARGV[1],ARGV[2]}" 2 key1 key2 first second
+1) "key1"
+2) "key2"
+3) "first"
+4) "second"
+
+> eval "return redis.call('set',KEYS[1],'bar')" 1 foo
+OK
+
+evlsha:类似与eval，替代第一个参数，使用SHA1 digest of a script
+
