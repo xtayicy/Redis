@@ -14,7 +14,7 @@ public class TestJedis {
 	public void testConnection() {
 		// if you meet java.net.Connection,please check your firewall or
 		// redis.conf
-		try (Jedis jedis = new Jedis("192.168.0.120", 6379);) {
+		try (Jedis jedis = new Jedis("192.168.0.128", 6379);) {
 			// jedis.set("name", "jim");
 			String name = jedis.get("name");
 			System.out.println(name);
