@@ -9,7 +9,7 @@ import redis.clients.jedis.Jedis;
  * @author harry
  *
  */
-public class TestJedis {
+public class JedisTest {
 	@Test
 	public void testConnection() {
 		/**
